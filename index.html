@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">My Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Soham Haridas</span></h1>
+      <p>A passionate Front-end Developer</p>
+      <a href="#projects" class="cta">View My Work</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="./Soham_Photo.jpeg" alt="Your Profile" class="profile-image">
+      <p>
+        I'm a Front-end Developer with a keen eye for design and functionality.
+        I specialize in creating responsive, user-friendly web interfaces using modern web technologies.
+      </p>
+    </div>
+  </section>
+  
+  <section id="projects" class="projects">
+    <h2>My Projects</h2>
+    <div class="project-cards">
+      <a href="https://github.com/SohamHaridas/CodeAlpha" target="_blank" class="card-link">
+        <div class="card">
+          <img src="./2024-12-28 (2).png" alt="Project 1 Thumbnail" class="card-image">
+          <h3>Project 1</h3>
+          <p>A responsive image gallery built with HTML, CSS, and JavaScript.</p>
+        </div>
+      </a>
+      <a href="https://github.com/SohamHaridas/Task2/tree/main" target="_blank" class="card-link">
+        <div class="card">
+          <img src="./2024-12-28.png" alt="Project 2 Thumbnail" class="card-image">
+          <h3>Project 2</h3>
+          <p>A functional calculator with basic arithmetic operations.</p>
+        </div>
+      </a>
+      <a href="https://example.com/project3" target="_blank" class="card-link">
+        <div class="card">
+          <img src="./2024-12-28 (1).png" alt="Project 3 Thumbnail" class="card-image">
+          <h3>Project 3</h3>
+          <p>A fully responsive Portfolio.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  
+
+  <footer>
+    <p>© Made By Soham Haridas. All rights reserved.</p>
+  </footer>
+</body>
+</html>
